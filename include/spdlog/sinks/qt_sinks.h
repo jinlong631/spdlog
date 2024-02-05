@@ -216,6 +216,7 @@ protected:
         // insert the text after the color range with default format
         cursor.setCharFormat(params.default_color);
         cursor.insertText(params.payload.mid(params.color_range_end));
+        params.q_text_edit->setTextCursor(cursor);
     }
 
     QTextEdit *qt_text_edit_;
